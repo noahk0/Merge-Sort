@@ -1,4 +1,4 @@
-def m(l):
+def m(l: List[int]) -> List[int], int:
   if len(l) < 2:
     return l, 0
 
@@ -19,8 +19,3 @@ def m(l):
     r.extend(right)
 
   return r, i + li + ri
-
-with open('IntegerArray.txt', 'r') as f:
-  lines = f.readlines()
-
-print(m([int(line.strip()) for line in lines]))
